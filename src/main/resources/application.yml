@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: basket-service
+
+  data:
+    mongodb:
+      host: ${DATABASE_HOST}
+      port: ${DATABASE_PORT}
+      database: ${DATABASE_NAME}
+      username: ${DATABASE_USERNAME}
+      password: ${DATABASE_PASSWORD}
+
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT}
+      password: ${REDIS_PASSWORD}
+
+  cache:
+    redis:
+      time-to-live: 600000 # 10 mins
