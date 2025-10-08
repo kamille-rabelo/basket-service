@@ -1,6 +1,6 @@
 package dev.java.ecommerce.basketservice.controller;
 
-import dev.java.ecommerce.basketservice.client.response.PlatziProductResponse;
+import dev.java.ecommerce.basketservice.client.dto.PlatziProductDto;
 import dev.java.ecommerce.basketservice.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ public class ProductController {
     private final ProductService productService;
 
     @GetMapping
-    public ResponseEntity<List<PlatziProductResponse>> getAllProducts() {
+    public ResponseEntity<List<PlatziProductDto>> getAllProducts() {
 
         return ResponseEntity.ok(
                 productService.getAllProducts()
@@ -27,7 +27,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<PlatziProductResponse> getProductById(@PathVariable Long id) {
+    public ResponseEntity<PlatziProductDto> getProductById(@PathVariable Long id) {
 
         return ResponseEntity.ok(
                 productService.getProductById(id)

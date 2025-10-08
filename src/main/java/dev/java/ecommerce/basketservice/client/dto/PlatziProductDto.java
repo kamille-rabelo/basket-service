@@ -1,9 +1,9 @@
-package dev.java.ecommerce.basketservice.client.response;
+package dev.java.ecommerce.basketservice.client.dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
-public record PlatziProductResponse(
+public record PlatziProductDto(
         Long id,
         String title,
         BigDecimal price
